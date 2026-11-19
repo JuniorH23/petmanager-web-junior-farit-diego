@@ -161,3 +161,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+:root {
+  --primary: oklch(0.52 0.12 185);
+  --primary-foreground: oklch(0.985 0 0);
+  --ring: oklch(0.52 0.12 185);
+  --chart-1: oklch(0.62 0.15 60);
+  --chart-2: oklch(0.55 0.14 150);
+}
+
+.dark {
+  --primary: oklch(0.72 0.12 185);
+  --primary-foreground: oklch(0.18 0.02 185);
+  --ring: oklch(0.72 0.12 185);
+  --chart-1: oklch(0.78 0.14 70);
+  --chart-2: oklch(0.74 0.15 150);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --primary: oklch(0.72 0.12 185);
+    --primary-foreground: oklch(0.18 0.02 185);
+    --ring: oklch(0.72 0.12 185);
+    --chart-1: oklch(0.78 0.14 70);
+    --chart-2: oklch(0.74 0.15 150);
+  }
+}
